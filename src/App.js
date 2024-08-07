@@ -10,7 +10,7 @@ const App = () => {
   const [SearchTerm, setSearchTerm] = useState("");
 
   const searchMovie = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
+    const response = await fetch(`${API_URL}&s=${title || "spiderman"}`);
     const data = await response.json();
 
     console.log(data.Search);
